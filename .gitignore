@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# Local scratch runs (keep demo/ and samples/ committed)
+test/verify_*/
+test/output/
+test/output_epoch200/
+output/
+output_sr/

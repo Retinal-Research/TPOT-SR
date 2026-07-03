@@ -1,0 +1,23 @@
+# TPOT BETA — command cheat sheet (full docs in README.md)
+
+# 1. Single image (enhance, resize back to original)
+python enhance.py --input samples/IDRiD_01.jpg --output output
+
+# 2. Batch folder
+python enhance.py --input path/to/images --output path/to/enhanced
+
+# 3. CPU only
+python enhance.py --input samples --output output --device cpu
+
+# 4. Enhance + 2048 fusion (default output: 2048x2048)
+python enhance.py --input samples --output output_sr --sr
+
+# 5. Fusion then resize back to original dimensions
+python enhance.py --input samples --output output_sr --sr --restore_size
+
+# 6. Alternate checkpoint (model+discr files auto-extract generator weights)
+# python enhance.py --input samples --output output --checkpoint weights/model_denoise_epoch_200.pth
+
+# 7. Regenerate demos
+# python collect_demo_inputs.py
+# python make_demo.py
